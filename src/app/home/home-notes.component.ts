@@ -66,7 +66,6 @@ export class HomeNotesComponent implements OnInit {
     this.comment.postID = this._APINoteService.getNoteID()
     this._APINoteService.saveComment(this.comment).subscribe({
       next: (response) => {
-        console.log(response);
         if (response.message == 'added success') {
           this._APINoteService.sentClickEvent(form);
           this.displayPosts();
@@ -87,7 +86,6 @@ export class HomeNotesComponent implements OnInit {
 
     this._APINoteService.updateComment(this.updatedComment).subscribe({
       next: (response) => {
-        console.log(response);
         if (response.message == 'updated success') {
           this.displayPosts();
         }
@@ -108,7 +106,7 @@ export class HomeNotesComponent implements OnInit {
         console.log(this.deletedComment)
         this._APINoteService.deleteComment(this.deletedComment).subscribe({
           next: (response) => {
-            console.log(response);
+            
             if (response.message == 'deleted success') {
               //this._APINoteService.sentClickEvent(this.deleteComment);
               this.displayPosts();
@@ -169,7 +167,7 @@ export class HomeNotesComponent implements OnInit {
   deletePost() {
     this._APINoteService.deletePost().subscribe({
       next: (response) => {
-        console.log(response);
+
         if (response.message == 'deleted success') {
           this.displayPosts();
           this.note_id = '';

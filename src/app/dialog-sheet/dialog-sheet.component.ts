@@ -33,7 +33,7 @@ export class DialogSheetComponent implements OnInit {
     this.note.content = form.value['content'];
     this._APINoteService.savepost(this.note).subscribe({
       next: (response) => {
-        console.log(response);
+
         if (response.message == 'added success') {
           this._APINoteService.sentClickEvent(form);
         }
