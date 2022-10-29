@@ -1,0 +1,41 @@
+<div id="particles" class="bg d-flex justify-content-center align-items-center">
+    
+    <div id="intro" class="sign-in p-5 w-50">
+        <h2 class="text-light login-header text-center">Sign in</h2>
+        <div class="line mb-5 mx-auto"></div>
+        <form [formGroup]="logInForm" (ngSubmit)="onLogIn(logInForm)">
+            <div>
+                <h1 class="text-success text-center" *ngIf="responseMessage == 'success'">{{responseMessage}}</h1>
+                <h1 class="text-danger  text-center" *ngIf="responseMessage != 'success'">{{responseMessage}}</h1>
+            </div>
+
+
+
+
+            <input formControlName="email" type="email" class="form-control my-3" placeholder="Enter Your Email">
+
+            <p class="text-warning text-bold ms-md-3"
+                *ngIf="logInForm.controls['email']?.errors?.['required']  && logInForm.controls.email.touched">
+                Please enter your email
+            </p>
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="logInForm.controls['email']?.errors?.['email']  && logInForm.controls.email.touched">
+                Please enter vaild email
+            </p>
+            <!--{{registerationForm.controls['email'].errors|json}}-->
+
+
+            <input formControlName="password" type="password" class="form-control my-3"
+                placeholder="Enter Your Password">
+
+            <button class="bg-btn text-white btn w-100 my-3">Log in</button>
+            <!--onchange="btnDisable(registerationForm)" [disabled]="btnDisable(registerationForm)"-->
+        </form>
+
+        <div class="text-light text-center">
+            <p class="font-size">doesn't have an account? <a routerLink="/Sign_up" class="text-bold login">Register</a></p>
+        </div>
+
+    </div>
+</div>

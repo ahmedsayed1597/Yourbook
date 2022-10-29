@@ -1,0 +1,16 @@
+#popup {
+
+    background: #fff;
+    width: 50%;
+    height: 50%;
+    z-index: 200;
+    box-shadow: 0px 0px 10px rgba(121, 115, 115, 0.5)
+}
+
+#overlay {
+    height: 100vh;
+
+    background-color: black;
+    opacity: 0.7;
+
+}

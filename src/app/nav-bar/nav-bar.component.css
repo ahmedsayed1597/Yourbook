@@ -1,0 +1,25 @@
+.bg{
+    background-color: rgb(44, 8, 175)
+}
+
+.welcome {
+    color: navy;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.bg-nav {
+    color: rgb(207, 198, 198);
+    font-weight: bold;
+}
+
+.bg-nav-item {
+    color: gray;
+}
+
+.nav-profile-picture{
+    height: 100x;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid blue;
+}

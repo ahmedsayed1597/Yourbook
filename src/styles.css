@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: rgb(245, 238, 238);
+}
+
+.bg-btn{
+    background-color: gray;
+}
+.bg-btn:hover{
+    background-color: green;
+}
+
+li{
+    cursor: pointer;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.modal-color{
+    font-size: 1rem;
+    color: red;
+}

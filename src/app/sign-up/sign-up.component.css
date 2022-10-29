@@ -1,0 +1,32 @@
+
+
+.bg{
+    height: 100vh; 
+    background-image: url(src/assets/pexels-quintin-gellar-313782.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sign-up{
+    background-color: rgba(52, 146, 239, 0.5);
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.font-size{
+    font-size: 1.2rem;
+}
+
+.register-header{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.line{
+    height: 1px;
+    background-color: white;
+    width: 75%;
+}

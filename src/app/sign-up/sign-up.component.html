@@ -1,0 +1,88 @@
+<div id="particles" class="bg d-flex justify-content-center align-items-center">
+
+    <div id="intro" class="sign-up p-5 w-50">
+     <h2 class="text-light register-header text-center">Register</h2>
+     <div class="line mb-5 mx-auto"></div>
+
+        <form [formGroup]="registerationForm" (ngSubmit)="onSubmit(registerationForm)">
+            <div>
+                <h1 class="text-success text-center" *ngIf="responseMessage == 'success'">{{responseMessage}}</h1>
+                <h1 class="text-danger  text-center" *ngIf="responseMessage != 'success'">{{responseMessage}}</h1>
+            </div>
+
+           
+                
+                    <input formControlName="name" type="text" class="form-control my-3"
+                        placeholder="Enter Name">
+                    <p class="text-warning text-bold"
+                        *ngIf="registerationForm.controls['name']?.errors?.['required'] !=null && registerationForm.controls.name.touched">
+                        Please fill this field
+                    </p>
+
+                    <p class="text-warning text-bold"
+                        *ngIf="registerationForm.controls['name']?.errors?.['minlength']  && registerationForm.controls.name.touched">
+                        Minimum should be 3
+                    </p>
+
+                    <p class="text-warning text-bold"
+                        *ngIf="registerationForm.controls['name']?.errors?.['maxlength']  && registerationForm.controls.name.touched">
+                        Max length should be 15
+                    </p>
+                
+
+            
+                <input formControlName="phone" type="text" class="form-control  my-3"
+                    placeholder="phone">
+                <p class="text-warning text-bold ms-md-3 "
+                    *ngIf="registerationForm.controls['phone']?.errors?.['required'] !=null && registerationForm.controls.phone.touched">
+                    Please fill this field
+                </p>
+
+                <p class="text-warning text-bold ms-md-3"
+                    *ngIf="registerationForm.controls['phone']?.errors?.['pattern']  && registerationForm.controls.phone.touched">
+                    this phone not vaild
+                </p>
+
+
+            
+            <input formControlName="email" type="email" class="form-control my-3" placeholder="Enter Your Email">
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="registerationForm.controls['email']?.errors?.['required']  && registerationForm.controls.email.touched">
+                Please enter your email
+            </p>
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="registerationForm.controls['email']?.errors?.['email']  && registerationForm.controls.email.touched">
+                Please enter vaild email
+            </p>
+            <!--{{registerationForm.controls['email'].errors|json}}-->
+            <input formControlName="age" type="number" class="form-control my-3" placeholder="Enter Your Age">
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="registerationForm.controls['age']?.errors?.['required']  && registerationForm.controls.age.touched">
+                Please enter your age
+            </p>
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="registerationForm.controls['age']?.errors?.['min']   && registerationForm.controls.age.touched">
+                you should be older than 10 years
+            </p>
+
+            <p class="text-warning text-bold ms-md-3 "
+                *ngIf="registerationForm.controls['age']?.errors?.['max']   && registerationForm.controls.age.touched">
+                maxmum age should be 90
+            </p>
+
+
+            <input formControlName="password" type="password" class="form-control my-3"
+                placeholder="Enter Your Password">
+
+            <button  class="bg-btn text-white btn w-100 my-3">Register</button>
+            <!--onchange="btnDisable(registerationForm)" [disabled]="btnDisable(registerationForm)"-->
+        </form>
+        <div class="text-light text-center">
+            <p class="font-size">Already have an account? <a routerLink="/Log_in" class="text-bold login">Login</a></p>
+        </div>
+    </div>
+</div>

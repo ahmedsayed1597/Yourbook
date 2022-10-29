@@ -1,0 +1,125 @@
+
+.btn:hover {
+    border: none;
+}
+
+.btn {
+    border: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.post-name{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.comment-name{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.comment{
+    background-color: rgb(245, 238, 238);
+    color: beige;
+    
+}
+
+.comment-bg{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 3%;
+}
+
+.post {
+    background-color: white;
+    border: 2px solid black !important;
+    border-radius: 3%;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.avatar-comment{
+    width: 3.5rem;
+    height: 3.5rem;
+    
+}
+
+.line{
+    height: 2px;
+    background-color: blue;
+}
+
+.add-cooment{
+    background-color: rgb(245, 238, 238);
+    border: none;
+}
+
+.comment-font{
+    font-size: 1.2rem;
+}
+
+.comment-icon{
+    background-color: white;
+    border: none;
+    font-size: 1.2rem;
+    color: gray;
+}
+.comment-header{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.fa-bars {
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.bg-green {
+    background-color: blue;
+}
+
+.btn-note {
+    padding: 0.5rem;
+    width: 40%;
+    padding-left: auto;
+    padding-right: auto;
+    color: white;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.btn-note:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.close {
+    cursor: pointer;
+}
+
+.fa-xmark {
+    font-size: 1.5rem;
+}
+
+.bg-model{
+    background-color: rgb(34, 34, 247);
+}
+
+.model-text{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.btn-close{
+    color: white !important;
+    background-color: white !important;
+}

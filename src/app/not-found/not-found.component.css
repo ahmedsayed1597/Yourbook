@@ -1,0 +1,13 @@
+.not-found{
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+}
+
+body{
+    background-color: black;
+}
+
+.bg{
+    height: 100vh;
+}

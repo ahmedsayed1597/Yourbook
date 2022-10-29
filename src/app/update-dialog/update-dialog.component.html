@@ -1,0 +1,28 @@
+<button mat-dialog-close class="bg-transparent" id="close"><i class="fa-solid fa-xmark"></i></button>
+
+
+<form [formGroup]="logInForm" (ngSubmit)="onUpdate(logInForm)">
+
+    <!-- <div>
+                <h1 class="text-success text-center" *ngIf="responseMessage == 'success'">{{responseMessage}}</h1>
+                <h1 class="text-danger  text-center" *ngIf="responseMessage != 'success'">{{responseMessage}}</h1>
+            </div> -->
+
+    <input formControlName="title" type="text" class="form-control my-3" placeholder="Enter Your Title">
+
+    <p class="text-danger ms-md-3 "
+        *ngIf="logInForm.controls['title']?.errors?.['required']  && logInForm.controls.title.touched">
+        Please enter your Title
+    </p>
+
+    <textarea class="form-control my-3" name="desc" formControlName="desc" id="" cols="50" rows="8"
+        placeholder="Enter your description"></textarea>
+
+    <p class="text-danger ms-md-3 "
+        *ngIf="logInForm.controls['desc']?.errors?.['desc']  && logInForm.controls.desc.touched">
+        Please enter your description
+    </p>
+    <button class="bg-btn text-white btn w-100 my-3">Update</button>
+    <button class="bg-danger text-white btn w-100 my-3" mat-dialog-close >cancel</button>
+
+</form>

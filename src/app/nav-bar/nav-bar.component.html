@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg" *ngIf="userLogin != null">
+  <div class="container">
+    <a class="navbar-brand text-light" *ngIf="userLogin !== null" routerLink="home"><i class="fa-solid fa-note-sticky"></i>
+      Your Book</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+      <a class="dropdown-item bg-nav-item text-center bg-nav text-light" *ngIf="userLogin != null" routerLink="home">Home</a>
+      <a class="dropdown-item bg-nav-item text-center bg-nav text-light" *ngIf="userLogin != null" routerLink="profile">My Profile</a>
+      <!-- <p *ngIf="userLogin !== null" class="ms-auto mb-2 mb-lg-0 welcome">Welcome {{userName}} </p> -->
+
+      <div class="nav-profile-picture"><img class="img-fluid rounded-5" src="assets/index1.png" alt=""></div>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle bg-nav"  role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span *ngIf="userLogin == null">Register</span>
+            <span *ngIf="userLogin !== null">{{userName}}</span>
+          </a>
+
+          <!-- <a class="nav-link dropdown-toggle bg-nav" *ngIf="userLogin !== null" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            logout
+          </a> -->
+         
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item bg-nav-item" *ngIf="userLogin == null" routerLink="Log_in">Log in</a></li>
+            <li><a class="dropdown-item bg-nav-item" *ngIf="userLogin == null" routerLink="Sign_up">Sign up</a></li>
+            <li><a class="dropdown-item bg-nav-item" *ngIf="userLogin !== null" (click)="logOut();">Log out</a></li>
+            <li><a class="dropdown-item bg-nav-item" *ngIf="userLogin !== null" routerLink="change_password">Account Setting</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
